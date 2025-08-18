@@ -6,6 +6,7 @@ project(ohos-napi-framework
 
 add_library(napi-framework INTERFACE include/napi_framework.h include/napi_framework-inl.h)
 target_include_directories(napi-framework INTERFACE include/)
+target_link_libraries(napi-framework INTERFACE libace_napi.z.so)
 add_library(napi::framework ALIAS napi-framework)
 
 # set(NAPI_AKI_JSBIND aki_jsbind)
